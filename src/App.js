@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./styles/main.css";
 import "./styles/bootstrap.css"; // edit
 import "./styles/my-style.css";
@@ -25,7 +25,7 @@ import { ToastContainer } from "react-toastify";
 import { saveUser } from "./libs/localStorage";
 function App({ setUser, user }) {
   const history = useHistory();
-  useEffect(() => {
+  React.useEffect(() => {
     const access_token = localStorage.getItem("access_token");
     const refresh_token = localStorage.getItem("refresh_token");
     if (access_token && access_token !== "undefined") {
